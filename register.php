@@ -1,13 +1,35 @@
 <?php
-
+function sanitizeFormUsername($inputText)
+{
+    $inputText = strip_tags($inputText);
+    $inputText = str_replace(" ", "", $inputText);
+    return $inputText;
+}
+function sanitizeFormPassword($inputText)
+{
+    $inputText = strip_tags($inputText);
+    return $inputText;
+}
+function sanitizeFormString($inputText)
+{
+    $inputText = strip_tags($inputText);
+    $inputText = str_replace(" ", "", $inputText);
+    $inputText = ucfirst(strtolower($inputText));
+    return $inputText;
+}
 
 if (isset($_POST['loginButton'])) {
     //login button was pressed
 }
 if (isset($_POST['registerButton'])) {
     //login button was pressed
-    $username = $_POST['username'];
-    echo $username;
+    $username = sanitizeFormUsername($_POST['username']);
+    $firstName = sanitizeFormString($_POST['firstName']);
+    $lastName = sanitizeFormString($_POST['lastName']);
+    $email = sanitizeFormString($_POST['email']);
+    $email2 = sanitizeFormString($_POST['email2']);
+    $password = sanitizeFormPassword($_POST['password']);
+    $password2 = sanitizeFormPassword($_POST['password2']);
 }
 
 
@@ -45,7 +67,7 @@ if (isset($_POST['registerButton'])) {
             </p>
             <p>
                 <label for="firstName">First name</label>
-                <input id="username" name="username" type="text" placeholder="e.g. Elon" required>
+                <input id="firstName" name="firstName" type="text" placeholder="e.g. Elon" required>
             </p>
             <p>
                 <label for="lastName">Last name</label>
