@@ -13,6 +13,13 @@ class Account
         $this->validateLastName($ln);
         $this->validateEmails($em, $em2);
         $this->validatePasswords($pw, $pw2);
+
+        if (empty($this->errorArray) == true) {
+            return true;
+            //Insert into db
+        } else {
+            return false;
+        }
     }
     private function validateUsername($un)
     {
