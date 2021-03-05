@@ -9,7 +9,21 @@ class Account
         $this->con = $con;
         $this->errorArray = array();
     }
+    //validate login
+    public function login($un, $pw)
+    {   //encrypt password
+        //check if username and password exist
+        $pw = md5($pw);
+        $query = mysqli_query($this->con, "SELECT * FROM users WHERE username = '$un' AND password ='$pw'");
 
+        if (mysqli_num_rows($query) == 1) {
+            return true;
+        } else {
+            array_push($this->errorArray, Constants::$loginFailed);
+            return false;
+        }
+    }
+    //validate registration data
     public function register($un, $fn, $ln, $em, $em2, $pw, $pw2)
     {
         $this->validateUsername($un);
