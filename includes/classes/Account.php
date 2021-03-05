@@ -19,7 +19,7 @@ class Account
         $this->validatePasswords($pw, $pw2);
 
         if (empty($this->errorArray) == true) {
-            return insertUserDetails($un, $fn, $ln, $em, $pw);
+            return $this->insertUserDetails($un, $fn, $ln, $em, $pw);
             //Insert into db
         } else {
             return false;
@@ -49,18 +49,24 @@ class Account
             array_push($this->errorArray, Constants::$usernameCharacters);
             return;
         }
-        //TODO: check if username exists
+        $checkUsernameQuery = mysqli_query($this->con, "SELECT username FROM users WHERE username='$un'");
+        // check if username exists
+        //if there is anything other than 0
+        if (mysqli_num_rows($checkUsernameQuery) != 0) {
+            array_push($this->errorArray, Constants::$usernameTaken);
+            return;
+        }
     }
     private function validateFirstName($fn)
     {
-        if (strlen($fn) > 25 ||  strlen($fn) < 5) {
+        if (strlen($fn) > 25 ||  strlen($fn) < 2) {
             array_push($this->errorArray, Constants::$firstNameCharacters);
             return;
         }
     }
     private function validateLastName($ln)
     {
-        if (strlen($ln) > 25 ||  strlen($ln) < 5) {
+        if (strlen($ln) > 25 ||  strlen($ln) < 2) {
             array_push($this->errorArray, Constants::$lastNameCharacters);
             return;
         }
@@ -73,6 +79,13 @@ class Account
         }
         if (!filter_var($em, FILTER_VALIDATE_EMAIL)) {
             array_push($this->errorArray, Constants::$emailInvalid);
+            return;
+        }
+        $checkEmailQuery = mysqli_query($this->con, "SELECT email FROM users WHERE email='$em'");
+        // check if username exists
+        //if there is anything other than 0
+        if (mysqli_num_rows($checkEmailQuery) != 0) {
+            array_push($this->errorArray, Constants::$emailTaken);
             return;
         }
         //TODO: Check that email hasn't been used
