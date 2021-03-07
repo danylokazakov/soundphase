@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    console.log(document is ready);
+    console.log("document is ready");
     $("#hideLogin").click(function() {
         $("#loginForm").hide();
         $("#registerForm").show();
