@@ -45,29 +45,41 @@ body {
     box-sizing: border-box;
     color: #fff;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 2rem;
-    font-weight: normal;
+    font-size: 5rem;
+    font-weight: 500;
     line-height: 1em;
 }
 
 #loginContainer {
     margin: 0% auto;
     max-width: 1024px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
-    width: 80%;
+    max-width: 1024px;
 }
 
 #inputContainer {
     border-right: 1px solid #999;
-    display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 45px;
-    width: 400px;
+    padding: 4.5rem;
+    width: 80%;
 }
 
 #inputContainer h2 {
     text-align: center;
+    padding: 5px;
+    border-bottom: 3px solid aquamarine;
+    border-radius: 15px;
+}
+
+#inputContainer label {
+    color: #a0a0a0;
+    font-size: 2rem;
+    margin-top: 15px;
+    display: block;
 }
 
 #inputContainer input[type="text"],
@@ -80,6 +92,7 @@ body {
     font-size: 1.4rem;
     height: 27px;
     line-height: 27px;
+    margin: 10px 0px;
     width: 100%;
 }
 
@@ -94,7 +107,11 @@ body {
     letter-spacing: 1px;
     margin: 20px auto;
     transition: all 0.3s ease-in-out;
-    width: 80%;
+    width: 90%;
+}
+
+#inputContainer button:hover {
+    font-size: 3rem;
 }
 
 #inputContainer button:hover,
@@ -107,15 +124,12 @@ body {
     width: 100%;
 }
 
-#inputContainer button:hover {
-    font-size: 3rem;
-}
-
 #hasAccountText span {
     border-radius: 25px;
     font-size: 1.5rem;
     font-weight: bold;
     padding: 1rem;
+    transition: all 0.3s ease-in-out;
 }
 
 #hasAccountText {
@@ -125,4 +139,48 @@ body {
 #registerForm,
 #loginForm {
     display: none;
+}
+
+#loginText {
+    padding: 20px;
+    display: table-cell;
+}
+
+#loginText h1 {
+    color: aquamarine;
+    font-size: 7rem;
+    font-weight: bold;
+}
+
+#loginText h2 {
+    margin: 35px 0;
+}
+
+#loginText ul {
+    padding: 0;
+}
+
+#loginText li,
+h2 {
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    padding: 10px 30px;
+    margin: 10px;
+    list-style-type: none;
+    font-size: 20px;
+}
+
+.checked {
+    width: 17px;
+}
+
+#loginText li:hover {
+    font-size: 25px;
+    transition: all 0.3s ease-in-out;
+}
+
+#inputContainer .errorMessage {
+    color: aquamarine;
+    font-size: 1.3rem;
+    display: block;
 }

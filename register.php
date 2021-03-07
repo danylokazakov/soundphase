@@ -60,7 +60,7 @@ function getInputValue($name)
                     </p>
                     <p>
                         <label for="loginPassword">Password</label>
-                        <input id="loginPassword" name="loginPassword" type="password" required>
+                        <input id="loginPassword" name="loginPassword" type="password" placeholder="e.g. *pet name*" required>
                     </p>
                     <button type="submit" name="loginButton">Sign in</button>
                     <div id="hasAccountText"><span id="hideLogin">Don't have an account yet? Signup here</span></div>
@@ -120,6 +120,16 @@ function getInputValue($name)
                     <div id="hasAccountText"><span id="hideRegister">Don't have an account yet? Signup here</span></div>
 
                 </form>
+            </div>
+            <div id="loginText">
+                <h1>Listen to great music anywhere, anytime</h1>
+
+                <ul>
+                    <li><img class="checked" src="assets/images/icons/checked.svg" /> Discover music you'll fall in love with</li>
+                    <li><img class="checked" src="assets/images/icons/checked.svg" /> Create your own playlists</li>
+                    <li><img class="checked" src="assets/images/icons/checked.svg" /> Follow artists to keep up to date</li>
+                </ul>
+                <h2>Signup for free!</h2>
             </div>
         </div>
     </div>
