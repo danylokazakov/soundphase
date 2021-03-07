@@ -12,6 +12,7 @@ if (isset($_SESSION['userLoggedIn'])) {
 
 <head>
     <title>Soundphase</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/normalize.css">
 </head>
 
 <body>
