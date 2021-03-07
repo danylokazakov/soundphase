@@ -57,6 +57,7 @@ function getInputValue($name)
 
                         <label for="loginUsername">Username</label>
                         <input id="loginUsername" name="loginUsername" type="text" placeholder="e.g. Elon Musk" required>
+
                     </p>
                     <p>
                         <label for="loginPassword">Password</label>
@@ -129,7 +130,7 @@ function getInputValue($name)
                     <li><img class="checked" src="assets/images/icons/checked.svg" /> Create your own playlists</li>
                     <li><img class="checked" src="assets/images/icons/checked.svg" /> Follow artists to keep up to date</li>
                 </ul>
-                <h2>Signup for free!</h2>
+                <h2>Sign up for free!</h2>
             </div>
         </div>
     </div>

@@ -61,39 +61,39 @@ body {
 }
 
 #inputContainer {
-    border-right: 1px solid #999;
-    flex-direction: column;
-    justify-content: center;
-    padding: 4.5rem;
     width: 80%;
+    padding: 4.5rem;
+    justify-content: center;
+    flex-direction: column;
+    border-right: 1px solid #999;
 }
 
 #inputContainer h2 {
     text-align: center;
+    font-size: 2.8rem;
     padding: 5px;
     border-bottom: 3px solid aquamarine;
     border-radius: 15px;
 }
 
-#inputContainer label {
-    color: #a0a0a0;
-    font-size: 2rem;
-    margin-top: 15px;
-    display: block;
-}
-
 #inputContainer input[type="text"],
 #inputContainer input[type="email"],
 #inputContainer input[type="password"] {
-    background-color: transparent;
-    border-bottom: 1px solid #fff;
-    border: 0;
     display: block;
-    font-size: 1.4rem;
+    background-color: transparent;
+    border: 0;
+    border-bottom: 1px solid #fff;
     height: 27px;
+    font-size: 1.5rem;
     line-height: 27px;
-    margin: 10px 0px;
     width: 100%;
+}
+
+#inputContainer label {
+    color: #a0a0a0;
+    font-size: 1.5rem;
+    margin-top: 15px;
+    display: block;
 }
 
 #inputContainer button {
