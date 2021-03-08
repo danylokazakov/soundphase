@@ -19,7 +19,20 @@ if (isset($_SESSION['userLoggedIn'])) {
 <body>
     <div id="nowPlayingBarContainer">
         <div id="nowPlayingBar">
-            <div id="nowPlayingLeft"></div>
+            <div id="nowPlayingLeft">
+                <div class="content">
+                    <span class="albumLink">
+                        <img class="albumArtwork" src="assets/images/Linkin_Park_Hybrid_Theory_Album_Cover.jpg" alt=""></span>
+                    <div class="trackInfo">
+                        <span class="trackName">
+                            In the end
+                        </span>
+                        <span class="artistName">
+                            Linkin park
+                        </span>
+                    </div>
+                </div>
+            </div>
             <div id="nowPlayingCenter">
                 <div class="content playerControls">
                     <div class="buttons">
