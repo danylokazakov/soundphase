@@ -2,6 +2,7 @@
 include("includes/config.php");
 
 //session_destroy(); LOGOUT
+// If user is not logged in go to register.php
 if (isset($_SESSION['userLoggedIn'])) {
     $userLoggedIn = $_SESSION['userLoggedIn'];
 } else {
@@ -17,8 +18,39 @@ if (isset($_SESSION['userLoggedIn'])) {
 </head>
 
 <body>
+    <!-- Container for main content -->
+    <div id="mainContainer">
+        <div id="topContainer">
+            <div id="navBarContainer">
+                <nav class="navBar">
+                    <a href="index.php" class="logo">
+                        <img src="assets/images/sound.png" alt="">
+                    </a>
+                    <div class="group">
+                        <div class="navItem">
+                            <a href="search.php" class="navItemLink">Search
+                                <img src="assets/images/icons/search.png" alt="Search" class="icon">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="group">
+                        <div class="navItem">
+                            <a href="browse.php" class="navItemLink">Browse</a>
+                        </div>
+                        <div class="navItem">
+                            <a href="mymusic.php" class="navItemLink">My music</a>
+                        </div>
+                        <div class="navItem">
+                            <a href="profile.php" class="navItemLink">My profile</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
     <div id="nowPlayingBarContainer">
         <div id="nowPlayingBar">
+            <!-- Album cover and track info -->
             <div id="nowPlayingLeft">
                 <div class="content">
                     <span class="albumLink">
@@ -33,6 +65,7 @@ if (isset($_SESSION['userLoggedIn'])) {
                     </div>
                 </div>
             </div>
+            <!-- Controls and progress bar -->
             <div id="nowPlayingCenter">
                 <div class="content playerControls">
                     <div class="buttons">
@@ -62,6 +95,7 @@ if (isset($_SESSION['userLoggedIn'])) {
                     </div>
                 </div>
             </div>
+            <!-- Volume controller -->
             <div id="nowPlayingRight">
                 <div class="volumeBar">
                     <button class="controlButton volume" title="Volume button">
