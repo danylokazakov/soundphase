@@ -48,10 +48,11 @@ function getInputValue($name)
     ?>
 
     <div id="background">
+
         <div id="loginContainer">
             <div id="inputContainer">
                 <form id="loginForm" action="register.php" method="POST">
-                    <h2>Login to your account</h2>
+                    <h2>Sign in to your account</h2>
                     <p>
                         <?php echo $account->getError(Constants::$loginFailed);  ?>
 
@@ -118,7 +119,7 @@ function getInputValue($name)
 
                     </p>
                     <button type="submit" name="registerButton">Sign up</button>
-                    <div id="hasAccountText"><span id="hideRegister">Don't have an account yet? Signup here</span></div>
+                    <div id="hasAccountText"><span id="hideRegister">Don't have an account yet? Sign up here</span></div>
 
                 </form>
             </div>
