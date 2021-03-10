@@ -1,31 +1,36 @@
-<?php
-include("includes/config.php");
+<?php include("includes/header.php"); ?>
 
-//session_destroy(); LOGOUT
-// If user is not logged in go to register.php
-if (isset($_SESSION['userLoggedIn'])) {
-    $userLoggedIn = $_SESSION['userLoggedIn'];
-} else {
-    header("Location: register.php");
-}
-?>
-<html>
+<h1 class="pageHeadingBig">You Might Also Like</h1>
 
-<head>
-    <title>Soundphase</title>
-    <link rel="stylesheet" type="text/css" href="assets/css/normalize.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-</head>
+<div class="gridViewContainer">
 
-<body>
-    <!-- Container for main content -->
-    <div id="mainContainer">
-        <div id="topContainer">
-            <?php include("includes/navBarContainer.php") ?>
-        </div>
-    </div>
-    <?php include("includes/nowPlayingBar.php") ?>
+	<?php
+		$albumQuery = mysqli_query($con, "SELECT * FROM albums ORDER BY RAND() LIMIT 10");
 
-</body>
+		while($row = mysqli_fetch_array($albumQuery)) {
+			
 
-</html>
+
+
+			echo "<div class='gridViewItem'>
+
+					<img src='" . $row['artworkPath'] . "'>
+
+					<div class='gridViewInfo'>"
+						. $row['title'] .
+					"</div>
+
+				</div>";
+
+
+
+		}
+	?>
+
+</div>
+
+
+
+
+
+<?php include("includes/footer.php"); ?>
