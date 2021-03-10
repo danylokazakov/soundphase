@@ -1,5 +1,13 @@
 /* Common styles for the whole page */
 
+:root {
+    --primary-color: #2c3531;
+    --secondary-color: #ffcb9a;
+    --accent-color: #d9b08c;
+    --blue-text-color: #116466;
+    --white-text-color: #d1e8e2;
+}
+
 html,
 body {
     padding: 0;
@@ -25,7 +33,7 @@ body {
 }
 
 #navBarContainer {
-    background-color: #000;
+    background-color: rgb(3, 3, 61);
     width: 250px;
     height: 100vh;
     position: fixed;
@@ -68,7 +76,7 @@ body {
     color: aquamarine;
 }
 
-.icon {
+.icon-search {
     position: absolute;
     right: 10px;
     top: 5px;
@@ -80,7 +88,7 @@ body {
 
 #nowPlayingBarContainer {
     width: 100%;
-    background-color: #282828;
+    background-color: rgb(3, 3, 61);
     position: fixed;
     bottom: 0;
     min-width: 620px;
