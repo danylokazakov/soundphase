@@ -1,10 +1,12 @@
 <?php
-ob_start();
-session_start(); //starts user session and keeps it through pages
+	ob_start();
+	session_start();
 
-$timezone = date_default_timezone_set("Europe/London");
-//servername, username, password, database name
-$con = mysqli_connect("localhost", "root", "", "soundphase");
-if (mysqli_connect_errno()) {
-    echo "Failed to connect: " . mysqli_connect_errno();
-}
+	$timezone = date_default_timezone_set("Europe/London");
+
+	$con = mysqli_connect("localhost", "root", "", "slotify");
+
+	if(mysqli_connect_errno()) {
+		echo "Failed to connect: " . mysqli_connect_errno();
+	}
+?>
