@@ -10,14 +10,40 @@ body {
 }
 
 * {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #fff;
     letter-spacing: 1px;
 }
 
+
+/* 
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+h3 {
+    font-size: 1.17rem;
+}
+
+h4 {
+    font-size: 1.12rem;
+}
+
+h5 {
+    font-size: .83rem;
+}
+
+h6 {
+    font-size: .75rem;
+} */
+
 body {
+    font-size: 62.5%;
     background-color: #181818;
-    font-size: 14px;
     min-width: 720px;
 }
 
@@ -31,7 +57,7 @@ body {
 
 #nowPlayingBar {
     display: flex;
-    height: 90px;
+    height: 150px;
     padding: 16px;
     box-sizing: border-box;
 }
@@ -72,14 +98,14 @@ body {
 }
 
 .controlButton img {
-    width: 20px;
-    height: 20px;
+    width: 50px;
+    height: 50px;
 }
 
 .controlButton.play img,
 .controlButton.pause img {
-    width: 32px;
-    height: 32px;
+    width: 60px;
+    height: 60px;
 }
 
 .controlButton:hover {
@@ -87,8 +113,8 @@ body {
 }
 
 .progressTime {
+    font-size: 1rem;
     color: #a0a0a0;
-    font-size: 11px;
     min-width: 40px;
     text-align: center;
 }
@@ -123,14 +149,14 @@ body {
 }
 
 #nowPlayingLeft .albumArtwork {
-    height: 100%;
-    max-width: 57px;
+    width: 120px;
     margin-right: 15px;
     float: left;
     background-size: cover;
 }
 
 #nowPlayingLeft .trackInfo {
+    font-size: 1.5rem;
     display: table;
 }
 
@@ -141,7 +167,6 @@ body {
 }
 
 #nowPlayingLeft .trackInfo .artistName span {
-    font-size: 12px;
     color: #a0a0a0;
 }
 
@@ -181,7 +206,7 @@ body {
 }
 
 .logo img {
-    width: 32px;
+    width: 60px;
 }
 
 .navBar .group {
@@ -191,7 +216,7 @@ body {
 
 .navItem {
     padding: 10px 0;
-    font-size: 14px;
+    font-size: 1rem;
     font-weight: 700;
     display: block;
     letter-spacing: 1px;
@@ -289,6 +314,7 @@ body {
 
 .tracklist {
     padding: 0;
+    font-size: 1rem;
 }
 
 .tracklistRow {
@@ -405,9 +431,11 @@ body {
 .searchContainer {
     background-color: #242424;
     padding: 20px 28px;
+    font-size: 2rem;
 }
 
 .searchContainer h4 {
+    font-size: 1.5rem;
     margin: 0;
     font-weight: 300;
 }
@@ -418,7 +446,6 @@ body {
     border: none;
     color: #fff;
     font-weight: 700;
-    font-size: 62px;
     letter-spacing: 2px;
 }
 
