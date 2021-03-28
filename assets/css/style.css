@@ -10,7 +10,7 @@ body {
 }
 
 * {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     color: #fff;
     letter-spacing: 1px;
 }
@@ -43,7 +43,7 @@ h6 {
 
 body {
     font-size: 62.5%;
-    background-color: #181818;
+    background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.7)), url('../images/background.jpg');
     min-width: 720px;
 }
 
@@ -98,8 +98,8 @@ body {
 }
 
 .controlButton img {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
 }
 
 .controlButton.play img,
@@ -121,6 +121,7 @@ body {
 
 .playbackBar {
     display: flex;
+    margin: 10px;
 }
 
 .progressBar {
@@ -131,6 +132,7 @@ body {
 }
 
 .progressBarBg {
+    margin: 10px;
     background-color: #404040;
     height: 4px;
     width: 100%;
@@ -153,6 +155,7 @@ body {
     margin-right: 15px;
     float: left;
     background-size: cover;
+    border-radius: 15px;
 }
 
 #nowPlayingLeft .trackInfo {
@@ -172,12 +175,15 @@ body {
 
 .volumeBar {
     width: 180px;
+    display: flex;
+    justify-content: center;
     position: absolute;
     right: 0;
 }
 
 .volumeBar .progressBar {
-    width: 125px;
+    margin: 10px;
+    width: 200px;
 }
 
 #topContainer {
@@ -265,9 +271,11 @@ body {
 
 .gridViewItem img {
     width: 100%;
+    border-radius: 15px;
 }
 
 .gridViewInfo {
+    font-size: 1rem;
     font-weight: 300;
     text-align: center;
     padding: 5px 0;
@@ -281,6 +289,7 @@ body {
 }
 
 .entityInfo {
+    font-size: 1rem;
     padding: 40px 0 10px 0;
     display: inline-block;
     width: 100%;
@@ -403,14 +412,16 @@ body {
     font-weight: 500;
     letter-spacing: 2px;
     border: 2px solid #fff;
-    border-radius: 500px;
+    border-radius: 15px;
     padding: 15px;
     min-width: 130px;
 }
 
-.button.green {
-    background-color: #2ebd59;
-    border-color: #2ebd59;
+button:hover {
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    border: none;
+    background: linear-gradient(90deg, rgba(194, 108, 255, 1) 0%, rgba(0, 255, 214, 1) 100%);
 }
 
 .borderBottom {
@@ -430,13 +441,14 @@ body {
 
 .searchContainer {
     background-color: #242424;
+    margin: 10px;
     padding: 20px 28px;
     font-size: 2rem;
+    border-radius: 25px;
 }
 
 .searchContainer h4 {
     font-size: 1.5rem;
-    margin: 0;
     font-weight: 300;
 }
 
@@ -480,6 +492,8 @@ input:focus {
 }
 
 .playlistImage {
+    border-radius: 15px;
+    background-color: #fff;
     border: 3px solid #282828;
     padding: 10px;
 }
@@ -503,7 +517,7 @@ input:focus {
     cursor: pointer;
     height: 40px;
     background-color: #282828;
-    font-size: 14px;
+    font-size: 1rem;
 }
 
 .optionsMenu .item:hover {
@@ -543,6 +557,7 @@ input:focus {
     width: 100%;
     background: #1f1f1f;
     border: none;
+    border-radius: 15px;
     font-size: 18px;
     font-weight: 300;
     padding: 0 20px;
@@ -551,4 +566,5 @@ input:focus {
 .userDetails .container .message {
     color: #2ebd59;
     font-weight: 300;
+    font-size: 1rem;
 }

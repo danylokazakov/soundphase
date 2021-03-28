@@ -134,7 +134,6 @@ body {
     height: 5rem;
     cursor: pointer;
     border: none;
-    background: rgb(53, 138, 255);
     background: linear-gradient(90deg, rgba(194, 108, 255, 1) 0%, rgba(0, 255, 214, 1) 100%);
 }
 
