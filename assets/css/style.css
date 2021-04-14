@@ -43,7 +43,7 @@ h6 {
 
 body {
     font-size: 62.5%;
-    background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.7)), url('../images/background.jpg');
+    background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.7)), url('../images/bk4.jpg');
     min-width: 720px;
 }
 
@@ -57,7 +57,7 @@ body {
 
 #nowPlayingBar {
     display: flex;
-    height: 150px;
+    height: 130px;
     padding: 16px;
     box-sizing: border-box;
 }
@@ -110,6 +110,7 @@ body {
 
 .controlButton:hover {
     cursor: pointer;
+    background-color: transparent;
 }
 
 .progressTime {
@@ -417,7 +418,7 @@ body {
     min-width: 130px;
 }
 
-button:hover {
+.button:hover {
     transition: all 0.3s ease-in-out;
     cursor: pointer;
     border: none;
@@ -466,6 +467,7 @@ input:focus {
 }
 
 .searchResultRow {
+    font-size: 2rem;
     padding: 15px 10px;
 }
 
@@ -480,6 +482,8 @@ input:focus {
 .noResults {
     margin: 15px;
     display: block;
+    font-size: 2rem;
+    color: #8a8787;
 }
 
 .buttonItems .button {
