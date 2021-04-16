@@ -1,6 +1,12 @@
 <img src="/assets/images/sound.png" width="25" height="25" alt="logo"/>Soundphase
 ==========
-Music-streaming service, created using PHP, JavaScript and mySQL.
+## Music-streaming service
+Listen to music you like the most!
+Used technologies:
+* PHP
+* HTML&CSS
+* JavaScript
+* mySQL
 
 ## :metal: You can
 - Sign in to service!
